@@ -61,7 +61,7 @@ return array(
     *     - FALSE: square50/newname.png, size100/newname.jpg
     */
    'suffix' => true,
-   
+
    /*
     * Get the EXIF data. PHP must be compiled in with --enable-exif to use this method. 
     * Windows users must also have the mbstring extension enabled.
@@ -71,4 +71,16 @@ return array(
     *     - FALSE (default): ignore exif data
     */
    'exif' => env('IMAGEUPLOAD_EXIF', false),
+
+   /*
+    * Place to store the uploaded image. It might required additional dependecies.
+    * Please refer to https://laravel.com/docs/filesystem
+    *
+    * Example:
+    *     - local (default): placed in local storage
+    *     - ftp: placed in other place via FTP
+    *     - s3: placed to Amazon S3 Cloud
+    *     - rackspace: placed to Rackspace Cloud
+    */
+   'storage' => env('IMAGEUPLOAD_STORAGE', 'local'),
 );
