@@ -30,7 +30,7 @@
     "classmap": [
       "src/migrations"
     ],
-    "psr-0": {
+    "psr-4": {
       "Matriphe\\Imageupload\\": "src/"
     }
   },
