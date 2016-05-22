@@ -2,7 +2,6 @@
 
 namespace Matriphe\Imageupload;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Filesystem\Filesystem as File;
 use Illuminate\Support\Str;
 use Imagine\Imagick\Imagine as Imagick;
@@ -196,7 +195,7 @@ class Imageupload implements ImageuploadInterface
      * @param string       $newfilename (default: null)
      * @param string       $dir         (default: null)
      */
-    public function upload(UploadedFile $filesource, $newfilename = null, $dir = null)
+    public function upload($filesource, $newfilename = null, $dir = null)
     {
         $isPathOk = $this->checkPathIsOk($this->uploadpath, $dir);
         $isImage = $this->checkIsImage($filesource);
